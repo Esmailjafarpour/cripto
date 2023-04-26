@@ -5,7 +5,10 @@ import {getCoin} from "../services/api";
 
 //component
 import Loader from '../components/Loader';
-import Coin from '../components/Coin'
+import Coin from '../components/Coin';
+
+// style
+import styles from "./Landing.module.css";
 
 const Landing = () => {
 
@@ -33,10 +36,10 @@ const Landing = () => {
      return (
 
           <>
-               <input type="text" placeholder="Search" value={search} onChange={searchHandler}/>
+               <input className={styles.input} type="text" placeholder="Search" value={search} onChange={searchHandler}/>
                
                {coins.length ? 
-                    <div>
+                    <div className={styles.coinContainer}>
                          {searchCoins.map(coin =>(
                               <Coin 
                                    key={coin.id}
