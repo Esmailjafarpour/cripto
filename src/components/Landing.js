@@ -35,7 +35,10 @@ const Landing = () => {
 
      return (
 
-          <>
+          <>   
+               <div className={styles.title}>
+                    <h1>صرافی جعفرپور</h1>
+               </div>
                <input className={styles.input} type="text" placeholder="Search" value={search} onChange={searchHandler}/>
                
                {coins.length ? 
